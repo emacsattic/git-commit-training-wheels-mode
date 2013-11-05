@@ -82,7 +82,6 @@
   :lighter    " GCTW"
   :init-value nil
   :global     nil
-  :group     'git-commit-training-wheels-mode
   (or (derived-mode-p 'git-commit-mode)
       (error "This mode only makes sense with `git-commit-mode'"))
   (cond (git-commit-training-wheels-mode
