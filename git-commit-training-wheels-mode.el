@@ -5,6 +5,7 @@
 ;; Author: Yasuyuki Oka <yasuyk@gmail.com>
 ;; Version: DEV
 ;; URL: https://github.com/yasuyk/git-commit-training-wheels-mode
+;; Package-Requires: ((git-commit-mode "0.14.0"))
 ;; Keywords: convenience vc git
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -34,6 +35,8 @@
 ;;   (add-hook 'git-commit-mode-hook 'git-commit-training-wheels-mode)
 
 ;;; Code:
+
+(require 'git-commit-mode)
 
 (defadvice git-commit-commit (around git-commit-training-wheels disable)
   "Make sure we have a nice commit message."
