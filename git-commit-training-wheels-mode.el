@@ -73,8 +73,9 @@
             (unless (yes-or-no-p (concat problem "  Commit anyway? "))
               (setq ok-to-commit nil)
               (throw 'break nil))))))
-    (when ok-to-commit
-      ad-do-it)))
+    (if ok-to-commit
+        ad-do-it
+      (git-commit-abort))))
 
 ;;;###autoload
 (define-minor-mode git-commit-training-wheels-mode
